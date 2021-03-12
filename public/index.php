@@ -2,7 +2,7 @@
 
     use core\Route;
 
-    require_once __DIR__.'\config\route.php';
+    require_once __DIR__.'\..\config\route.php';
     
     $myRoutes=Route::$myRoutes;
 
@@ -12,7 +12,7 @@
     $path=explode("?",$linkReq);        // separt the get parame
     // // print_r($path);
     if (isset($myRoutes[$path[0]])) { // if don't have eny parame in the link 
-        include_once $myRoutes[$path[0]]; //routing
+        include_once '..\\'.$myRoutes[$path[0]]; //routing
     }else{
         $pathParam=explode("/",$path[0]);
         $countPathParam=count($pathParam);
@@ -43,7 +43,7 @@
         if (isset($good) and max($good) != 0) { // If we are the largest equals 0 , It means that no link has been endorsed
             $root= array_search(max($good),$good); // This is the key to the right path, because he is the one who has obtained the most number of validations
             // //echo $root; // this the key of the true route
-            include_once $myRoutes[$root];
+            include_once '..\\'.$myRoutes[$root];
         }
         // // print_r($_GET);
         return header("HTTP/1.0 404 Not Found");
