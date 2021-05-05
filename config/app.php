@@ -4,7 +4,7 @@ return [
         'host'     => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'test',
+        'database' => 'se3bdela',
     ],
     'root'=> __DIR__."\\..\\",
     'path' => [

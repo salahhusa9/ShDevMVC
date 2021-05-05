@@ -38,7 +38,7 @@
         return $_SESSION[$sessionName] ?? false;
     }
 
-    function view($var)
+    function view($var,array $_data=[])
     {
         $index=explode(".",$var);
         $pathGen="";
@@ -53,6 +53,12 @@
 
         if (!file_exists($dir)) {
             return "View Not Exist";
+        }
+
+        // change data for var
+
+        foreach ($_data as $key => $value) {
+            $GLOBALS[$key]=$value;
         }
 
         return $dir;
