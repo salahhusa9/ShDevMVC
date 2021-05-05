@@ -35,10 +35,8 @@ class HomeController extends MainController {
 
         // $article=$article->update(['id',1],'title' , 'Blog NEW');  
 
-
         // $article=$article->delete('id',1);  
         
-
         return view('one.tow',['articles' => $article]);
     }
 }
