@@ -34,7 +34,11 @@ use core\Route;
         $sep1=new $class();
         $sep2=$link[1];
 
-        require_once $sep1->$sep2();
+        if (!file_exists($sep1->$sep2())) {
+            print_r($sep1->$sep2());
+        }else {
+            require_once $sep1->$sep2();
+        }
 
     }else{
         $pathParam=explode("/",$path[0]);
@@ -81,7 +85,13 @@ use core\Route;
             $sep1=new $class();
             $sep2=$link[1];
 
-            require_once $sep1->$sep2(...$parameters);
+            if (!file_exists($sep1->$sep2(...$parameters))) {
+                print_r($sep1->$sep2(...$parameters));
+            }else {
+                require_once $sep1->$sep2(...$parameters);
+            }
+
+            // require_once $sep1->$sep2(...$parameters);
         }
         // // print_r($_GET);
         return header("HTTP/1.0 404 Not Found");
