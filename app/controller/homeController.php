@@ -2,9 +2,24 @@
 
 namespace App\Controller;
 
-class HomeController {
+
+use App\Controller\MainController;
+
+class HomeController extends MainController {
+    
     public function index()
     {
-        return 'you are in home controller';
+        // return 'gg';
+        return view('home');
+    }
+
+    public function test($id)
+    {
+        return $id;
+    }
+
+    public function view()
+    {
+        return view('view');
     }
 }

@@ -38,7 +38,25 @@
         return $_SESSION[$sessionName] ?? false;
     }
 
-    //test
-    // print_r(appConfig("conficFile.path.logo"));
-    
+    function view($var)
+    {
+        $index=explode(".",$var);
+
+        $dir="../view/".$index[0].".php";
+        if (!file_exists($dir)) {
+            return "View Not Exist";
+        }
+        // $includ=require($dir);
+        // unset($index[0]); //for delete name of the config file
+        // $last=$includ;
+        // foreach ($index as $item){
+        //     if (!isset($last[$item])) {
+        //         return null;
+        //     }
+        //     $last=$last[$item];
+        // }
+
+        return $dir;
+    }
+
 ?>

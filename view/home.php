@@ -1,3 +1,3 @@
 <?php
-    echo 'You are home';
+    echo 'You are in home';
 ?>

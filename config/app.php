@@ -6,6 +6,7 @@ return [
         'password' => '',
         'database' => 'test',
     ],
+    'root'=> __DIR__."\\..\\",
     'path' => [
         'logo' => './assets/img/logo.png',
     ],
