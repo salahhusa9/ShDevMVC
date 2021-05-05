@@ -20,6 +20,6 @@ class HomeController extends MainController {
 
     public function view()
     {
-        return view('view');
+        return view('one.tow');
     }
 }

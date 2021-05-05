@@ -41,20 +41,19 @@
     function view($var)
     {
         $index=explode(".",$var);
+        $pathGen="";
+        if (count($index) != 1) {
+            foreach ($index as $val) {
+                $pathGen.="/".$val;
+            }
+            $dir="../view".$pathGen.".php";
+        }else{
+            $dir="../view/".$index[0].".php";
+        }
 
-        $dir="../view/".$index[0].".php";
         if (!file_exists($dir)) {
             return "View Not Exist";
         }
-        // $includ=require($dir);
-        // unset($index[0]); //for delete name of the config file
-        // $last=$includ;
-        // foreach ($index as $item){
-        //     if (!isset($last[$item])) {
-        //         return null;
-        //     }
-        //     $last=$last[$item];
-        // }
 
         return $dir;
     }
