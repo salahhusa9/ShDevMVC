@@ -8,9 +8,9 @@ class Route {
     
     public static function get($link,$path)
     {
-        if ($_SERVER['REQUEST_METHOD']!=='GET') {
-            die('the method is false ,not get');
-        }
+        // if ($_SERVER['REQUEST_METHOD']!=='GET') {
+        //     die('the method is false ,not get');
+        // }
         
         return self::$myRoutes[$link]=$path;
     }
