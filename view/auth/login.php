@@ -53,7 +53,7 @@
                     </div>
                     <div class="group">
 
-                        <a href="signup.html" class="link">Create new account</a>
+                        <!-- <a href="signup.html" class="link">Create new account</a> -->
 
                     </div>
                 </form>
