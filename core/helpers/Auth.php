@@ -38,4 +38,9 @@ class Auth
     {
         return $_SESSION['user'] ?? false;
     }
+
+    public static function logout()
+    {
+        return $_SESSION['login'] = false ;
+    }
 }
