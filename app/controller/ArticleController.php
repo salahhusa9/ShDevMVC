@@ -1,14 +1,20 @@
 <?php
-
 namespace App\Controller;
 
 use App\Models\Article;
+use code\helpers\Auth;
 
 class ArticleController extends MainController
 {
+    public function __construct() {
+        if (!Auth::check()) {
+            redirect('login');
+        }
+    }
+
     public function index()
     {
-        return view('article');
+        return view('article',['user' => Auth::user()]);
     }
 
     public function api()

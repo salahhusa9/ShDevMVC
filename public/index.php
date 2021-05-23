@@ -43,6 +43,7 @@ use core\Route;
     }else{
         $pathParam=explode("/",$path[0]);
         $countPathParam=count($pathParam);
+        $parameters=[];
         // //print_r($pathParam);
         foreach ($myRoutes as $key => $value) {
             $good[$key]=0;

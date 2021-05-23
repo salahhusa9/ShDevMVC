@@ -26,7 +26,7 @@
         <div class="account-right">
             <div class="form-area">
 
-                <form action="" method="post">
+                <form action="/login/confirme" method="post">
                     <div class="group">
 
                         <h2 class="form-heading">
@@ -37,7 +37,7 @@
 
                     <div class="group">
 
-                        <input type="email" name="full_email" class="control" placeholder="Enter Your Email" -value="<?php if(isset($email)) : echo $email; endif; ?>">
+                        <input type="email" name="email" class="control" placeholder="Enter Your Email" -value="<?php if(isset($email)) : echo $email; endif; ?>">
             
                     </div>
                     <div class="group">

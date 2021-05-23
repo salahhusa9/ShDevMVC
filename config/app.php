@@ -15,5 +15,6 @@ return [
     ],
     'test' => [
         'hi' => 'hi'
-    ]
+    ],
+    'domain' => 'http://localhost:8000'
 ];

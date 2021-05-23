@@ -64,4 +64,14 @@
         return $dir;
     }
 
+    function redirect($page)
+    {
+        return header('Location:'.appConfig('domain').'/'.$page);
+    }
+
+    function Auth()
+    {
+        return \code\helpers\Auth::class;
+    }
+
 ?>
