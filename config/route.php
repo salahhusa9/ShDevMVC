@@ -5,6 +5,7 @@ use core\Route;
 
 Route::get('login' , 'AuthController@index');
 Route::get('login/confirme' , 'AuthController@confirme');
+Route::get('logout' , 'AuthController@logout');
 
 Route::get('article' , 'ArticleController@index');
 Route::get('article/api' , 'ArticleController@api');

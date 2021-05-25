@@ -22,4 +22,10 @@ class AuthController extends MainController
         return redirect('article');
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('login');
+    }
+
 }
